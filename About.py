@@ -10,7 +10,7 @@ def get_base64_of_bin_file(png_file):
 
 def build_markup_for_logo(
     png_file,
-    background_position="% 10%",
+    background_position="% 10%", 
     margin_top="",
     image_width="100%",
     image_height="40%",
