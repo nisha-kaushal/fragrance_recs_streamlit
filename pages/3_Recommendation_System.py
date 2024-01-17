@@ -219,7 +219,7 @@ chosen. <span style='color:#A4E675;font-weight:bold'>Essentially, lower cosine s
 
 2. Most of the fragrances will have an average rating of **0**. ***This does not mean the fragrance is bad!***  All it means is that no one has given feedback on the fragrance. 
 
-3. Because this app is a demo app, currently user feedback does not get recorded, thus the average rating does not get updated. Any non-zero average ratings that may occur have been given by Nisha herself. That being said, any non-zero average ratings are accurate to Nisha's preferences! 
+3. More Fragrances will be added periodically to allow for more recomemendation options!
 """, unsafe_allow_html=True)
 df = final_df()
 get_all = get_all_notes(df)
