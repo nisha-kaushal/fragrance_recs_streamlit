@@ -60,14 +60,9 @@ more fragrance notes will be available as well!*
 accurately represents the list of notes given. Is there any way this can be a note 
 given for future users?</span>
 
-*This recommendation system is currently in its early stages, and as of now there is no 
-functionality for this. That being said, a functionality like this will likely be added 
-to create a more robust system, so check back periodically!* **RESOLVED**
+*There is! Check out the "Fragrance Feedback" section, where you can give feedback whichever fragrances you have tried. The average numerical review will be reflected 
+the next time it is recommended. * 
 
-***NOTE THAT THE ABOVE HAS BEEN IMPLEMENTED VIA THE "FRAGRANCE FEEDBACK" SECTION. However, because
-this app is currently in its demo stage, the feedback will not reflect in the recommendations.
-Any "average rating" that is non-zero in the suggested fragrances are based on Nisha's own experience
-with the fragrance***
 
 **3.** <span style='color:#A4E675;font-weight:bold'>What is the point of the generated username in the "Fragrance Feedback" section?</span>
 
