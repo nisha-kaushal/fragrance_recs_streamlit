@@ -78,4 +78,10 @@ a "log-in" option has currently been deemed unnecessary.*
 *The usernames are completely random! Essentially, we take a random verb from a long list of verbs, tack on 
 a random noun from a large list of nouns, and finally tack on a random number between 0 and 100,000. This allows for 
 a spectacular amount of unique usernames!*
+
+**5.** <span style='color:#A4E675;font-weight:bold'>Who created the logo in the top left corner?</span>
+
+*The logo was created by Nisha herself! She has an affinity to art, and was excited to show a snippet of it through the logo!*
 """, unsafe_allow_html=True)
+
+
