@@ -60,7 +60,7 @@ def add_logo(png_file):
 
 add_logo("frag_logo.png")
 
-st.title('THE FRAGRANCE PREFERENCES PROJECT (DEMO)')
+st.title('THE FRAGRANCE PREFERENCES PROJECT')
 st.markdown('By Nisha Kaushal')
 st.markdown('''
 <span style='color:#62BD91;font-weight:bold;font-size: 180%'>ABOUT THIS PROJECT</span>
@@ -125,7 +125,3 @@ feedback will then be used in the recommendation system's recommendations
 
 
 """, unsafe_allow_html = True)
-
-st.subheader("""
-**Please note that this is a demo app, and currently fragrance feedback does not affect the recommendation system. Functionality for feedback database updates to connect with recommendation system will be available soon. 
-""")
