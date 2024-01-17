@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import json
+from st_files_connection import FilesConnection
 
 #function to get al the possible notes
 @st.cache_data#
@@ -49,7 +50,12 @@ def category_dict(all_notes_in_frag_df): #input is get_all_notes(df)[0]
 def get_avg_rating(fragrance_of_interest):
     with open('pages/user_feedback.json') as uf:
         feed = json.load(uf)
-    uf_df = pd.DataFrame(feed)
+
+    conn = st.connection('s3', type=FilesConnection)
+
+    ##The below gives a pandas df
+    df = conn.read("fragrancestreamlit/pages/user_feedback.json", input_format="json", ttl=600)
+    uf_df = pd.DataFrame(df)
     ratings = 0.0
     if fragrance_of_interest in list(uf_df.columns):
         frag_col_list = [val for val in list(uf_df[fragrance_of_interest]) if isinstance(val, dict)]
