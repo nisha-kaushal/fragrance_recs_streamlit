@@ -3,6 +3,8 @@ import json
 import pandas
 import random
 import base64
+import boto3
+from st_files_connection import FilesConnection
 
 def generate_username(list_of_verbs, list_of_nouns, num_max = 100000):
     len_verbs = len(list_of_verbs)
@@ -95,6 +97,16 @@ brands_list = list(brands_names.keys())
 with open('pages/user_feedback.json') as uf:
     user_feedback = json.load(uf)
 
+conn = st.connection('s3', type=FilesConnection)
+
+##The below gives a pandas df
+df = conn.read("fragrancestreamlit/pages/user_feedback.json", input_format="json", ttl=600)
+user_feedback = df
+#user_feedback = df
+s3 = boto3.client('s3')
+bucket_name = 'fragrancestreamlit'
+s3_file_name = 'pages/user_feedback.json'
+
 #st.markdown("""App by Nisha Kaushal""")
 st.header('WE WANT TO HEAR FROM YOU!')
 
@@ -145,6 +157,9 @@ if previous_user == 'Yes':
                                 with open('pages/user_feedback.json', 'w') as new:
                                     json.dump(user_feedback, new)
 
+                                with open('pages/user_feedback.json', 'rb') as rb:
+                                    s3.upload_fileobj(rb, bucket_name, 'pages/user_feedback.json')
+
 else: #We have a new user!
     user = generate_username(verbs_list, nouns_list)
     st.markdown(f"""
@@ -175,6 +190,11 @@ else: #We have a new user!
                         ##TO DO: update user_feedback file
                         with open('pages/user_feedback.json', 'w') as new:
                             json.dump(user_feedback, new)
+                            
+                        with open('pages/user_feedback.json', 'rb') as rb2:
+                            s3.upload_fileobj(rb2, bucket_name, 'pages/user_feedback.json')
+
+
 
 st.subheader("""
 Please note that this is a demo app, and currently fragrance feedback does not affect the recommendation system. Functionality for feedback database updates to connect with recommendation system will be available soon.
