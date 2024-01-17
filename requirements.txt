@@ -3,4 +3,6 @@ streamlit
 altair
 scikit-learn
 numpy
-
+boto3
+st-files-connection
+s3fs==2023.12.2
