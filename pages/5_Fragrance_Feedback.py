@@ -195,11 +195,3 @@ else: #We have a new user!
                             s3.upload_fileobj(rb2, bucket_name, 'pages/user_feedback.json')
 
 
-
-st.subheader("""
-Please note that this is a demo app, and currently fragrance feedback does not affect the recommendation system. Functionality for feedback database updates to connect with recommendation system will be available soon.
-
-This means, for now, any feedback/reviews given will not impact the fragrances recommended to users. You may still test the fragrance feedback, 
-to get an as to how it would be used. 
-""")
-
