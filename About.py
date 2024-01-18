@@ -42,21 +42,6 @@ def add_logo(png_file):
         unsafe_allow_html=True,
     )
 
-# css='''
-# [data-testid="stSidebarNav"] {
-#     position:absolute;
-#     bottom: 0;
-# }
-# '''
-
-# st.markdown("""
-#     <style>
-#       section[data-testid="stSidebar"] {
-#         top: 50%;
-#         height: 80% !important;
-#       }
-#     </style>""", unsafe_allow_html=True)
-# st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 add_logo("frag_logo.png")
 
