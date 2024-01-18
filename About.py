@@ -118,7 +118,7 @@ is looking for, and outputs 5 fragrances that are the most likely to fit the use
 **3)** <span style='color:#A4E675;font-weight:bold'>Find the Note Category</span>: The above recommendation system categorizes the notes, and 
 some notes are not as obvious to place in a category. This section allows for users to find the category for a specific note
 
-**4)** <span style='color:#A4E675;font-weight:bold'>Fragrance Feedback**</span>: Allows user to give reviews on fragrances they have tried previously. The 
+**4)** <span style='color:#A4E675;font-weight:bold'>Fragrance Feedback</span>: Allows user to give reviews on fragrances they have tried previously. The 
 feedback will then be used in the recommendation system's recommendations
 
 **5)** <span style='color:#A4E675;font-weight:bold'>Frequently Asked Questions</span>: Contains possible questions user may have, with answers
